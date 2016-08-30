@@ -1,41 +1,39 @@
 ---
 title: Big-O
-type: lab
+type: Lab
 duration: "1:00"
 creator:
-    name: Josh Bartz
-    city: Missoula
+    name: Charlie Drews
+    city: NYC
 ---
 
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
-
-# Big-O Lab
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Big-O Lab
 
 ## Introduction
 
 > ***Note:*** _This can be a pair programming activity or done independently._
 
-In this lab, you will be identifying the type of sort and calculating Big O (worst case performance) of various sorting algorithms.
+In this lab, you will determine the time complexity of various algorithms in terms of their worst-case running times. You will express those running times in Big-O notation.
 
 ## Exercise
 
 #### Requirements
 
-- Identify the type of sort for three pseudocoded algorithms
-- Calculate the Big O notation of those algorithms; include **an explanation**
+- For each of the four pseudocoded algorithms, determine the worst-case running time in Big-O notation
+- Include an _**explanation**_ of how you arrived at your answer
 
 **Bonus**
 
-- Do the same for the fourth algorithm
+- Perform the same analysis for the fifth algorithm
 
 
 #### Starter code
 
-In the `starter-code` folder, you will find code for the three pseudocoded algorithms and the bonus.
+In the [starter code](starter-code) folder, you will find code for the four pseudocoded algorithms and the bonus.
 
 #### Deliverable
 
-Below each method, write the type of sort, the Big O notation, and an explanation for how you came to that conclusion.
+Modify the pseudocode text file by adding the worse-case running time in Big-O notation and your explanation beneath each algorithm. Submit a pull request including your modified file. If you worked with a partner, put both names in the title of the pull request.
 
 ## Additional Resources
 

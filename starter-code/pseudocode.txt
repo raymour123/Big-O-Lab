@@ -1,88 +1,77 @@
 Problem 1:
 
-func insertionSort( var a as array )
-    for i from 1 to N
-        for j from i to 1
-            if a[j] < a[j-1]
-                swap a[j] and a[j-1]
+func sumArray(var A as array of length n)
+    var sum as int = 0
+    for i from 0 to n - 1
+        sum += A[i]
+    return sum
 end func
+
+Running time: 
+Explanation: 
+
+----------------------------------------------------------------
 
 Problem 2:
 
-func mergeSort( var a as array )
-     if ( n == 1 ) return a
-
-     var l1 as array = a[0] ... a[n/2]
-     var l2 as array = a[n/2+1] ... a[n]
-
-     l1 = mergesort( l1 )
-     l2 = mergesort( l2 )
-
-     return merge( l1, l2 )
+func sumMatrix(var A as n x n matrix) // A matrix can be represented as an array of arrays, from A[0][0] to A[n][n]
+    var sum as int = 0
+    for i from 0 to n - 1
+        sum += sumArray(A[i])
+    return sum
 end func
 
-func merge( var a as array, var b as array )
-     var c as array
+Running time: 
+Explanation: 
 
-     while ( a and b have elements )
-          if ( a[0] > b[0] )
-               add b[0] to the end of c
-               remove b[0] from b
-          else
-               add a[0] to the end of c
-               remove a[0] from a
-     while ( a has elements )
-          add a[0] to the end of c
-          remove a[0] from a
-     while ( b has elements )
-          add b[0] to the end of c
-          remove b[0] from b
-     return c
-end func
+----------------------------------------------------------------
 
 Problem 3:
 
-int i,j;
+func countDivisionsByTwo(var n as int)
+    var count as int = 0
+    var i as int = n
+    while i >= 1
+        count++
+        i = i / 2
+    return count
+end func
 
-/* advance the position through the entire array */
-/*   (could do j < n-1 because single element is also min element) */
-for (j = 0; j < n-1; j++) {
-    /* find the min element in the unsorted a[j .. n-1] */
+Running time: 
+Explanation: 
 
-    /* assume the min is the first element */
-    int iMin = j;
-    /* test against elements after j to find the smallest */
-    for ( i = j+1; i < n; i++) {
-        /* if this element is less, then it is the new minimum */
-        if (a[i] < a[iMin]) {
-            /* found new minimum; remember its index */
-            iMin = i;
-        }
-    }
+----------------------------------------------------------------
 
-    if(iMin != j) {
-        swap(a[j], a[iMin]);
-    }
-}
+Problem 4:
 
-Bonus:
+func arrayMax(var A as array of length n)
+    var currentMax as int = A[0]
+    for i from 0 to n - 1
+        if A[i] > currentMax then
+            currentMax = A[i]
+    return currentMax
+end func
 
-func quicksort(var a as array, var low as int, var high as int){
-    if (low < high)
-        pivotLocation = partition(A,low,high)
-        quicksort(a,low, pivot_location)
-        quicksort(a, pivotLocation + 1, high)
+Running time: 
+Explanation: 
 
+----------------------------------------------------------------
 
-func partition(var a as array, var low as int, var high as int){
-    pivot = a[low]
-    leftwall = low
+***BONUS*** Problem 5:
 
-    for i = low + 1 to high
-        if (a[i] < pivot)
-            leftwall = leftwall + 1
-            swap(a[i], a[leftwall])
+func bonusFunction(var n as int)
+    var total as int = 0
+    for i from 1 to n
+        for j from 1 to n
+            total += 1
+        for k from 1 to 2 * n
+            total += 1
+            var m as int = 0
+            while (m < 3 * n)
+                total += 1
+                m += 2
+    return total
+end func
 
-    swap(a[low], a[leftwall])
-
-    return (leftwall)
+Running time: 
+Explanation: 
