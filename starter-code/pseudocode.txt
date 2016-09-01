@@ -7,9 +7,9 @@ func sumArray(var A as array of length n)
     return sum
 end func
 
-Running time: 
+Running time: O(n) Linear
 Explanation: 
-
+The sum starts off at Zero and goes through every single interation... because of this it is Linear.
 ----------------------------------------------------------------
 
 Problem 2:
@@ -21,9 +21,9 @@ func sumMatrix(var A as n x n matrix) // A matrix can be represented as an array
     return sum
 end func
 
-Running time: 
+Running time: O(n) Linear
 Explanation: 
-
+This is another Linear function as everything in the sub array is constant
 ----------------------------------------------------------------
 
 Problem 3:
@@ -37,9 +37,9 @@ func countDivisionsByTwo(var n as int)
     return count
 end func
 
-Running time: 
+Running time: O(log(n)) Logarithmic
 Explanation: 
-
+I think this is Logarithmic, it divides by 2 each time. 
 ----------------------------------------------------------------
 
 Problem 4:
@@ -52,8 +52,8 @@ func arrayMax(var A as array of length n)
     return currentMax
 end func
 
-Running time: 
-Explanation: 
+Running time: O(n) Linear
+Explanation: This is another Linear function, the method just goes through the array resetting everytime it finds a new Max.
 
 ----------------------------------------------------------------
 
